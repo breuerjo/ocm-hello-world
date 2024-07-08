@@ -1,0 +1,17 @@
+name: github.com/breuerjo/ocm-hello-world
+version: 1.0.0
+provider:
+  name: jonas-breuer.de
+resources:
+  - name: helm-echo-server
+    type: helmChart
+    version: 1.0.1
+    input:
+      type: helm
+      path: ./helm-echo-server
+  - name: image # remote image to test image resources (not related to the helm chart)
+    type: ociImage
+    version: 1.10.0
+    access:
+      type: ociArtifact
+      imageReference: gcr.io/google_containers/echoserver:1.10

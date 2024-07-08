@@ -1,0 +1,36 @@
+---
+component:
+  componentReferences: []
+  creationTime: "2024-07-08T18:04:27Z"
+  name: github.com/breuerjo/ocm-hello-world
+  provider: jonas-breuer.de
+  repositoryContexts: []
+  resources:
+  - access:
+      localReference: sha256:37e51c44f9077de80494a2bd48dfee1d3cc1546302ec3a113989cd617953291a
+      mediaType: application/vnd.oci.image.manifest.v1+tar+gzip
+      referenceName: github.com/breuerjo/ocm-hello-world/echo-server:1.0.1
+      type: localBlob
+    digest:
+      hashAlgorithm: SHA-256
+      normalisationAlgorithm: ociArtifactDigest/v1
+      value: 1ecffa5f0776316fb14e66afaa9b19424286fa721a1eaab1c8cac46d5595f175
+    name: helm-echo-server
+    relation: local
+    type: helmChart
+    version: 1.0.1
+  - access:
+      imageReference: gcr.io/google_containers/echoserver:1.10
+      type: ociArtifact
+    digest:
+      hashAlgorithm: SHA-256
+      normalisationAlgorithm: ociArtifactDigest/v1
+      value: cb5c1bddd1b5665e1867a7fa1b5fa843a47ee433bbb75d4293888b71def53229
+    name: image
+    relation: external
+    type: ociImage
+    version: 1.10.0
+  sources: []
+  version: 1.0.0
+meta:
+  schemaVersion: v2
